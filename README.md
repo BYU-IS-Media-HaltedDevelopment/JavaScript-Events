@@ -5,17 +5,26 @@ universal event registering
 
 Dependent on:
 
-Expected use example:
-<script language="javascript" type="text/javascript" src="js/event.lib.js"></script>
+Basic Usage
+===========
+	<script language="javascript" type="text/javascript" src="js/event.lib.js"></script>
+	
+	<script language="javascript" type="text/javascript">
+	// <!--
+	var myEvents = new EventsObject();
+	myEvents.register("click", document.getElementById('myElementId'), sampleHandlerFunction);
+	function sampleHandlerFunction(e) {
+		var targetElement;
+		targetElement = myEvents.getTarget(e);
+		targetElement.appendChild(document.createTextNode("An event fired here!\n"));
+	}
+	// -->
+	</script>
 
-<script language="javascript" type="text/javascript">
-// <!--
-var myEvents = new EventsObject();
-myEvents.register("click", document.getElementById('myElementId'), sampleHandlerFunction);
-function sampleHandlerFunction(e) {
-	var targetElement;
-	targetElement = myEvents.getTarget(e);
-	targetElement.appendChild(document.createTextNode("An event fired here!\n"));
-}
-// -->
-</script>
+	
+Methods
+=======
+	myEvents.register(EVENTTYPE, DOM_NODE, HANDLER_FUNCTION);
+	myEvents.deregister(EVENTTYPE, DOM_NODE, HANDLER_FUNCTION);
+	myEvents.getTarget(EVENT_OBJECT);
+	
