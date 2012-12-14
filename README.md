@@ -1,7 +1,7 @@
 JavaScript-Events
 =================
 
-**This repo is outdated. We're using jQuery now for all of our even registrations!**
+**This repo is outdated. We're using jQuery now for all of our event registrations!**
 
 universal event registering
 
