@@ -1,6 +1,8 @@
 JavaScript-Events
 =================
 
+**This repo is outdated. We're using jQuery now for all of our even registrations!**
+
 universal event registering
 
 Dependent on:
